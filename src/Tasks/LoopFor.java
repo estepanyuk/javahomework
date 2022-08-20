@@ -7,21 +7,17 @@ package Tasks;
 
 public class LoopFor {
     public static void main(String[] args) {
-
         int a = 1;
         int b = 100;
 
-        System.out.println("\nКоличество - " + getFour(a, b));
-    }
-
-    public static int getFour(int a, int b){
-        int count = 0;
         for (int i = b; i >= a; i--) {
-            if (i % 4 == 0) {
-                count += 1;
+            if (isFour(i)) {
                 System.out.print(i + " ");
             }
         }
-        return count;
+    }
+
+    public static boolean isFour(int number){
+        return number % 4 == 0;
     }
 }

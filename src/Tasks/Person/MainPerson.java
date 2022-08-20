@@ -22,8 +22,11 @@ public class MainPerson {
         System.out.print("Введите фамилию: ");
         String familyName = scanner.nextLine();
 
-        System.out.print("Введите возраст: ");
-        int age = Integer.parseInt(scanner.nextLine());
+        int age;
+        do {
+            System.out.print("Введите возраст (положительный): ");
+            age = Integer.parseInt(scanner.nextLine());
+        } while (age <= 0);
 
         Person person = new Person(name, middleName, familyName, age);
 

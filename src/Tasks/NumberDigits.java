@@ -13,7 +13,7 @@ public class NumberDigits {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите целое число: ");
-        int number = Integer.parseInt(scanner.nextLine());
+        int number = Math.abs(Integer.parseInt(scanner.nextLine()));
 
         int sum1 = 0;
         int sum2 = 0;

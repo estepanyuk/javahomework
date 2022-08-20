@@ -6,38 +6,38 @@ package Tasks;
 • В этом же классе - найти среднее арифметическое только четных чисел из этого диапазона чисел
 */
 
+import java.util.Scanner;
+
 public class Average {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        int a = 3;
-        int b = 17;
+        System.out.print("Введите начало диапазона: ");
+        int a = Integer.parseInt(scanner.nextLine());
 
-        int sum = 0;
-        int count = 0;
+        System.out.print("Введите конец диапазона: ");
+        int b = Integer.parseInt(scanner.nextLine());
 
-        for (int i = a; i <= b; i++) {
-            sum += i;
-            count += 1;
-            System.out.print(i + " ");
-        }
+        int sum1 = 0;
+        int count1 = 0;
 
-        int avg = sum / count;
-
-        System.out.println("\nСреднее арифметическое чисел - " + sum + " / " + count + " = " + avg);
-
-        sum = 0;
-        count = 0;
+        int sum2 = 0;
+        int count2 = 0;
 
         for (int i = a; i <= b; i++) {
+            sum1 += i;
+            count1 += 1;
+
             if (i % 2 == 0) {
-                sum += i;
-                count += 1;
-                System.out.print(i + " ");
+                sum2 += i;
+                count2 += 1;
             }
         }
 
-        avg = sum / count;
-        System.out.println("\nСреднее арифметическое четных чисел - " + sum + " / " + count + " = " + avg);
-    }
+        int avg1 = sum1 / count1;
+        int avg2 = sum2 / count2;
 
+        System.out.println("Среднее арифметическое чисел: " + sum1 + " / " + count1 + " = " + avg1);
+        System.out.println("Среднее арифметическое четных чисел: " + sum2 + " / " + count2 + " = " + avg2);
+    }
 }
