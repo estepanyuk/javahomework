@@ -13,31 +13,31 @@ public class Average {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите начало диапазона: ");
-        int a = Integer.parseInt(scanner.nextLine());
+        int start = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Введите конец диапазона: ");
-        int b = Integer.parseInt(scanner.nextLine());
+        int finish = Integer.parseInt(scanner.nextLine());
 
-        int sum1 = 0;
-        int count1 = 0;
+        int sumAll = 0;
+        int countAll = 0;
 
-        int sum2 = 0;
-        int count2 = 0;
+        int sumEven = 0;
+        int countEven = 0;
 
-        for (int i = a; i <= b; i++) {
-            sum1 += i;
-            count1 += 1;
+        for (int i = start; i <= finish; i++) {
+            sumAll += i;
+            countAll += 1;
 
             if (i % 2 == 0) {
-                sum2 += i;
-                count2 += 1;
+                sumEven += i;
+                countEven += 1;
             }
         }
 
-        int avg1 = sum1 / count1;
-        int avg2 = sum2 / count2;
+        int avgAll = sumAll / countAll;
+        int avgEven = sumEven / countEven;
 
-        System.out.println("Среднее арифметическое чисел: " + sum1 + " / " + count1 + " = " + avg1);
-        System.out.println("Среднее арифметическое четных чисел: " + sum2 + " / " + count2 + " = " + avg2);
+        System.out.println("Среднее арифметическое чисел: " + sumAll + " / " + countAll + " = " + avgAll);
+        System.out.println("Среднее арифметическое четных чисел: " + sumEven + " / " + countEven + " = " + avgEven);
     }
 }
